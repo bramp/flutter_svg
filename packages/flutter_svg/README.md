@@ -107,7 +107,8 @@ An SVG can be tested for compatibility with the vector graphics backend by
 running the compiler locally to see if any errors are thrown.
 
 ```sh
-dart run vector_graphics_compiler -i $SVG_FILE -o $TEMPORARY_OUTPUT_TO_BE_DELETED --no-optimize-masks --no-optimize-clips --no-optimize-overdraw --no-tessellate
+dart run --enable-asserts vector_graphics_compiler -i $SVG_FILE -o $TEMPORARY_OUTPUT_TO_BE_DELETED \
+  --no-optimize-masks --no-optimize-clips --no-optimize-overdraw --no-tessellate
 ```
 
 ## Recommended Adobe Illustrator SVG Configuration
